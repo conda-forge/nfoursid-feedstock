@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/nfoursid-feedst
 
 Summary: Implementation of N4SID, Kalman filtering and state-space models
 
-Development: https://nfoursid.readthedocs.io/en/latest/
+Development: https://github.com/spmvg/nfoursid
 
-Documentation: https://github.com/spmvg/nfoursid
+Documentation: https://nfoursid.readthedocs.io/en/latest/
 
 Current build status
 ====================
