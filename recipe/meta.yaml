@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: d481e8ad58f19eba4292498ea4fd1324572a31c776fe6cf2ca774ea42448c04b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - matplotlib-base >=3.3
     - numpy >=1.19
     - pandas >=1.1
@@ -30,6 +30,7 @@ test:
     - nfoursid.tests
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - python -m unittest discover -v nfoursid.tests
 
