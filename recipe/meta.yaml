@@ -1,5 +1,5 @@
 {% set name = "nfoursid" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d481e8ad58f19eba4292498ea4fd1324572a31c776fe6cf2ca774ea42448c04b
+  sha256: d65ba1bb98715f6310d0136aecdc997313caa239c08cc95f7e48378f77d06a24
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
